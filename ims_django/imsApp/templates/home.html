@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<style>
+    home-buttons {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .input-group {
+        padding: 5%;
+    }
+    .btn {
+        padding-inline: 2em;
+        background-color: black;
+        color: white;
+        border-radius: 0;
+        margin-top: 2em;
+        margin-left: 8.5em;
+        margin-right: 8.5em;
+    }
+    .btn:hover {
+        color: #fbb02d;
+    }
+    .card-body {
+        padding: 10px;
+    }
+</style>
+
+<!--Section: Content-->
+<section>
+
+    <div id="home-buttons">
+
+            <a class="btn" href="{% url 'inventory-page' %}">
+                <div class="card-body">
+                        Visualizar Inventario
+                </div>
+            </a>
+
+            <div class="btn">
+                <div class="card-body">
+                        Imprimir Etqiquetas
+                </div>
+            </div>
+
+            <div class="btn">
+                <div class="card-body">
+                        Productos en Sistema
+                </div>
+            </div>
+    </div>
+
+    <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+    </div>
+
+</section>
+{% endblock pageContent %} 

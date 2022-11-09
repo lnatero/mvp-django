@@ -42,7 +42,7 @@
                         <tbody>
                             {% for stock in stocks %}
                             <tr>
-                                <td class="text-center">{{ stock.date_created|date:"d/m/Y h:i A" }}</td>
+                                <td class="text-center">{{ stock.date_created|date:"d/m/Y h:i:s A" }}</td>
                                 <td class="text-center">{{ forloop.counter }}</td>
                                 <td class="text-center">{{ stock.quantity|floatformat:0|intcomma }}</td>
                                 <td class="text-center">

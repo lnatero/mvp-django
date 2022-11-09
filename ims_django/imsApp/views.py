@@ -293,8 +293,12 @@ def save_stock(request):
         # # else:
         #     stock = None
         # if stock is None:
-        form = SaveStock(request.POST)
-        print(form)
+        print(type(request))
+        json_obj = json.loads(request.body)
+        form = SaveStock(json_obj)
+        print(request.POST)
+        print(request.body)
+        # print(form)
         # else:
         #     form = SaveStock(request.POST, instance= stock)
         if form.is_valid():
